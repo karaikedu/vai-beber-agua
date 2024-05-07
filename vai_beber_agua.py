@@ -18,12 +18,7 @@ def mostrar_imagem(path_imagem:str):
     root = tkinter.Tk()
     img = tkinter.PhotoImage(master=root, file=path_imagem)
     label = tkinter.Label(master=root, image=img)
-    label.place(
-        x=0,
-        y=0,
-        width=root.winfo_screenwidth(),
-        height=root.winfo_screenheight()
-    )
+    label.pack()
     root.bind('<Button-1>', lambda event=None: root.destroy())
     root.attributes('-fullscreen', 1)
     root.mainloop()
@@ -48,7 +43,7 @@ def msg_aguardando(motivo='\b', tempo=10):
 PATH_IMAGENS = os.path.join('bisaco', 'imagens', '')
 ALBUM = [img for img in os.listdir(PATH_IMAGENS) if img.endswith('.png')]
 
-TEMPO_ESPERA = 10800
+TEMPO_ESPERA = 5  # 10800
 
 while True:
     random.shuffle(ALBUM)
