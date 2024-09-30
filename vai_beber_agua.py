@@ -43,7 +43,7 @@ def msg_aguardando(motivo='\b', tempo=10):
 PATH_IMAGENS = os.path.join('bisaco', 'imagens', '')
 ALBUM = [img for img in os.listdir(PATH_IMAGENS) if img.endswith('.png')]
 
-TEMPO_ESPERA = 5  # 10800
+TEMPO_ESPERA = 10800
 
 while True:
     random.shuffle(ALBUM)
